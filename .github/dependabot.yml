@@ -1,0 +1,22 @@
+# .github/dependabot.yml
+version: 2
+updates:
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "15:52"
+      timezone: "Europe/Paris"
+    open-pull-requests-limit: 10
+    allow:
+      - dependency-type: "direct"
+      - dependency-type: "indirect"
+      
+    labels:
+      - "dependencies"
+      - "security"
+      
+    commit-message:
+      prefix: "deps"
+      prefix-development: "deps-dev"
+      include: "scope"
